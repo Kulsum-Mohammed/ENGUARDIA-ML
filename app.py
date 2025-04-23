@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_page_config(page_title="EnGuardia NIDS", layout="wide")  # ✅ MUST BE FIRST
 import pandas as pd
 import numpy as np
 import joblib
@@ -65,7 +66,6 @@ def predict_attack(input_data, pkg):
 # Main app
 def main():
     set_custom_theme()
-    st.set_page_config(page_title="EnGuardia NIDS", layout="wide")
     
     pkg = load_model()
     if pkg is None:
